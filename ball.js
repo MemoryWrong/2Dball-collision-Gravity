@@ -8,8 +8,8 @@ class Ball {
 
         // velocity
         this.velocity = {
-            x:0,
-            y:0
+            x:20,
+            y:20
         }
         
     }
@@ -19,6 +19,8 @@ class Ball {
         fill(255);
         ellipse(this.x,this.y,this.r);
     }
+
+    
 
     
 }
