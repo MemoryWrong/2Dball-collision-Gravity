@@ -1,5 +1,9 @@
-console.log(13);
 var ball = new Ball(100,100);
+var perlin = new Perlin();
+var startPoint = {
+	x:0,
+	y: 200
+}
 
 function setup() {
 	
@@ -13,11 +17,12 @@ function draw() {
 	// put drawing code here
 	
 	
-	ball.draw();
-	if(ball.y>200){
-		ball.y += 1;
-	}else{
-		ball.y -=1;
-	}
-	// console.log(ball);
+	// ball.draw();
+
+
+	/** the perlin noise 2D graph view */
+	perlin.draw(startPoint);
+
+
+	// noLoop();
 }
