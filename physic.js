@@ -27,13 +27,19 @@ const momentum =(object1, object2)=>{
 
 }
 
+//this collision function only check circle shape object collision
 const isCollision = (object1, object2) =>{
     var disX = object1.x - object2.x;
     var disY = object1.y - object2.y;
-    var dis = disX **2 + disY **2;
-    var _dis = (object1.r + object2.r)**2;
+    var dis = sqrt(disX **2 + disY **2);
+    var _dis = (object1.r + object2.r)/2;
+
     if(dis <= _dis){
         // is collision
+        console.log(object1,object2);
+        console.log(dis,_dis);
+        alert('BOOOM: '+dis+' '+_dis);
+
         return true;
     }
     return false;

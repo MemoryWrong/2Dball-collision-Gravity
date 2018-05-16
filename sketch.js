@@ -24,7 +24,8 @@ function draw() {
 	ball.draw();
 	ball2.draw();
 	
-
+	if(isCollision(ball, ball2)){
+	}
 	/** the perlin noise 2D graph view */
 	// perlin.draw(startPoint);
 
